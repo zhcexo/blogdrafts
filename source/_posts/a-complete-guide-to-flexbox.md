@@ -196,6 +196,10 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 ![flex-basis](https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg)
 
+> flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+
+> 它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。
+
 ### flex
 
 这个属性是 `flex-grow`、`flex-shrink` 和 `flex-basis` 三个属性的简写方式，其中第二和第三个参数(也就是 `flex-shrink` 和 `flex-basis`)是可选的。默认值是 `0 1 auto`。
@@ -227,3 +231,5 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 ## 参考资料
 
 [A Complete Guide to Flexbox - css-tricks.com](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+[Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
