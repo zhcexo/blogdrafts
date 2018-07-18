@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Layout Demo</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    body {
+        background: white;
+        font-family: Arial, sans-serif;
+    }
+    p {
+        text-align: left !important;
+    }
+    .column {
+        background: lightgrey;
+        font-size: 18px;
+        text-align: center;
+    }
+    .Grid {
+    }
+    .Grid-cell {
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .column {
+        margin: 0 10px;
+        padding: 20px;
+        flex: 1;
+    }
+    .grid-4 .column:first-child {
+        flex-grow: 2;
+    }
+    .grid-5 .column:last-child {
+        flex: 0 33.333333%;
+    }
+    .grid-6 .column:first-child {
+        flex: 0 0 25%;
+    }
+    .grid-6 .column:last-child {
+        flex: 0 0 33.333333%;
+    }
+    .holygrail {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        text-align: center;
+    }
+    .holygrail header, .holygrail footer {
+        padding: 20px 0;
+        background: grey;
+        color: #fff;
+    }
+    .holygrail main {
+        flex: 1;
+        min-height: 30vh;
+        background: lightgrey;
+    }
+    .holygrail nav {
+        flex: 0 0 12em;
+        order: -1;
+        min-height: 30vh;
+        background: lightblue;
+    }
+    .holygrail aside {
+        flex: 0 0 12em;
+        min-height: 30vh;
+        background: orange;
+    }
+    .holygrail .body {
+        display: flex;
+    }
+    </style>
+</head>
+<body>
+    <div class="Grid">
+        <div class="Grid-cell">
+            <div class="column">1/2</div>
+            <div class="column">1/2</div>
+        </div>
+        <div class="Grid-cell">
+            <div class="column">1/3</div>
+            <div class="column">1/3</div>
+            <div class="column">1/3</div>
+        </div>
+        <div class="Grid-cell">
+            <div class="column">1/4</div>
+            <div class="column">1/4</div>
+            <div class="column">1/4</div>
+            <div class="column">1/4</div>
+        </div>
+        <div class="Grid-cell">
+            <div class="column">
+                <p>Full-height, even when my content doesn't fill the space.</p>
+            </div>
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lecturs purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</p>
+            </div>
+        </div>
+        <div class="Grid-cell grid-4">
+            <div class="column">1/2</div>
+            <div class="column">auto</div>
+            <div class="column">auto</div>
+        </div>
+        <div class="Grid-cell grid-5">
+            <div class="column">auto</div>
+            <div class="column">1/3</div>
+        </div>
+        <div class="Grid-cell grid-6">
+            <div class="column">1/4</div>
+            <div class="column">auto</div>
+            <div class="column">1/3</div>
+        </div>
+        <div class="holygrail">
+            <header>#header</header>
+            <div class="body">
+                <main class="content">#center</main>
+                <nav class="nav">#left</nav>
+                <aside class="ads">#right</aside>
+            </div>
+            <footer>#footer</footer>
+        </div>
+    </div>
+</body>
+</html>

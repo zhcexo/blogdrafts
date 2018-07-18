@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Dice</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    body {
+        background: grey;
+    }
+    .box {
+        float: left;
+        width: 220px;
+        height: 220px;
+        margin-top: 20px;
+        margin-left: 20px;
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: inset 10px 10px 5px #eee, inset -10px -10px 5px #ccc, 5px 5px 20px #333;
+    }
+    .item {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        border-radius: 100%;
+        background: #333;
+        box-shadow: inset -5px -5px 10px #222, 2px 2px 5px #333;
+    }
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box2 {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .box2 .item:last-child {
+        align-self: flex-end;
+    }
+    .box3 {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .box3 .item:nth-child(2) {
+        align-self: center;
+    }
+    .box3 .item:nth-child(3) {
+        align-self: flex-end;
+    }
+    .box4 {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    .box4 .row {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 100%;
+    }
+    .box5 {
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    .box5 .row {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 100%;
+    }
+    .box5 .row:nth-child(2) {
+        justify-content: center;
+    }
+    .box6 {
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    .box6 .row {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="item"></span>
+    </div>
+    <div class="box box2">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="box box3">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="box box4">
+        <div class="row">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+        <div class="row">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+    </div>
+    <div class="box box5">
+        <div class="row">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+        <div class="row">
+            <span class="item"></span>
+        </div>
+        <div class="row">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+    </div>
+    <div class="box box6">
+        <div class="row">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+        <div class="row">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+        <div class="row">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+    </div>
+</body>
+</html>
