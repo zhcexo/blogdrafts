@@ -18,7 +18,7 @@ Flexbox 是一个完整的模式，而不是一个单独的属性，所以它包
 
 如果说常规的布局是基于 block 和 inline 的流动方向，那么 flex 布局基于的就是 flex 的流动方向。下图指明了 flex 布局的规范。
 
-![specification](https://cdn.css-tricks.com/wp-content/uploads/2011/08/flexbox.png)
+![specification](http://cdn.css-tricks.com/wp-content/uploads/2011/08/flexbox.png)
 
 通常的，项目元素会基于主轴(从 main-start 到 main-end)或者交叉轴(从 cross-start 到 cross-end)陈列。
 
@@ -43,7 +43,7 @@ Flexbox 是一个完整的模式，而不是一个单独的属性，所以它包
 
 ### flex-direction
 
-![flex-direction](https://css-tricks.com/wp-content/uploads/2013/04/flex-direction2.svg)
+![flex-direction](http://css-tricks.com/wp-content/uploads/2013/04/flex-direction2.svg)
 
 这个属性确定主轴的方向，定义了子元素在父容器中的陈列。Flexbox 是一种单向布局理念，flex 子元素基本都是以水平行或者垂直列的方式呈现。
 
@@ -60,7 +60,7 @@ Flexbox 是一个完整的模式，而不是一个单独的属性，所以它包
 
 ### flex-wrap
 
-![flex-wrap](https://css-tricks.com/wp-content/uploads/2014/05/flex-wrap.svg)
+![flex-wrap](http://css-tricks.com/wp-content/uploads/2014/05/flex-wrap.svg)
 
 默认的，flex 子元素会试着呈现在一行里面，改变这个值可以让子元素按需折行
 
@@ -84,7 +84,7 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 ### justify-content
 
-![justify-content](https://cdn.css-tricks.com/wp-content/uploads/2013/04/justify-content-2.svg)
+![justify-content](http://cdn.css-tricks.com/wp-content/uploads/2013/04/justify-content-2.svg)
 
 此属性用于定义主轴的对齐方式。它用于分配剩余的空白空间(It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size.)。同时它也能控制子元素在超过一行时的对齐。
 
@@ -103,7 +103,7 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 ### align-items
 
-![align-items](https://cdn.css-tricks.com/wp-content/uploads/2014/05/align-items.svg)
+![align-items](http://cdn.css-tricks.com/wp-content/uploads/2014/05/align-items.svg)
 
 用来定义 flex 子元素在交叉轴方向上，默认的陈列方式。可以看作是 `justify-content` 在交叉轴上的版本。
 
@@ -121,7 +121,7 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 ### align-content
 
-![algin-content](https://css-tricks.com/wp-content/uploads/2013/04/align-content.svg)
+![algin-content](http://css-tricks.com/wp-content/uploads/2013/04/align-content.svg)
 
 这个属性用于处理 flex 容器内行与行之间、在交叉轴上有多余空间时的对齐问题，如同 `justify-content` 在主轴上对子元素对齐的处理。
 
@@ -144,7 +144,7 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 ### order
 
-![order](https://css-tricks.com/wp-content/uploads/2013/04/order-2.svg)
+![order](http://css-tricks.com/wp-content/uploads/2013/04/order-2.svg)
 
 默认的，flex 子元素是按源码里的顺序来排列的。然而 `order` 属性可以控制它们在父容器中出现的顺序。
 
@@ -156,7 +156,7 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 ### flex-grow
 
-![flex-grow](https://css-tricks.com/wp-content/uploads/2014/05/flex-grow.svg)
+![flex-grow](http://css-tricks.com/wp-content/uploads/2014/05/flex-grow.svg)
 
 这个属性定义的是 flex 子元素按需增长的能力。它接受的值是无单的数字作为比例，它规定了子元素占据 flex 父容器内可用空间的量。
 
@@ -194,7 +194,7 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 如果被设置为 0，那么内容周围的多余空白就没被考虑进去，如果设置为 `auto`，那么多余空白的分布，取决于它的 `flex-grow` 值。见下图：
 
-![flex-basis](https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg)
+![flex-basis](http://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg)
 
 > flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
 
@@ -214,7 +214,7 @@ flex-flow: <'flex-direction'> || <'flex-wrap'>
 
 ### align-self
 
-![align-self](https://css-tricks.com/wp-content/uploads/2014/05/align-self.svg)
+![align-self](http://css-tricks.com/wp-content/uploads/2014/05/align-self.svg)
 
 这个属性允许单个的 flex 子元素的默认的对齐(或者被 `align-item` 声明过)被覆盖。
 
