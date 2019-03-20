@@ -1,5 +1,5 @@
 ---
-title: 学习Vuex源码前的准备——变量的解构赋值
+title: 学习Vuex源码前的准备——数组的扩展运算符
 date: 2019-03-20 13:55:39
 tags: ['javascript', 'vuex']
 ---
@@ -197,4 +197,29 @@ const [first, ...middle, last] = [1, 2, 3, 4, 5]
 
 [...'\uD83D\uDE80'].length  // 1
 // 用扩展运算符就能正确识别
+```
+
+## 在 Vue 中的应用
+
+在 Vue 中，主要使用 Vuex 中的 `mapGetters` 和 `mapActions` 方法，来简化代码写法：
+
+```javascript
+// ...
+computed: {
+  ...mapGetters([
+    'center',
+    'zoom',
+    'draft'
+  ])
+}
+
+// ...
+methods: {
+  ...mapActions([
+    'setCenter',
+    'setUserPosition',
+    'setZoom',
+    'setDraftLocation'
+  ])
+}
 ```
